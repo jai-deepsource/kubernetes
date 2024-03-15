@@ -1,0 +1,17 @@
+version = 1
+
+[[analyzers]]
+name = "secrets"
+
+[[analyzers]]
+name = "docker"
+
+  [analyzers.meta]
+  dockerfile_paths = ["build/server-image/Dockerfile"]
+
+[[analyzers]]
+name = "go"
+
+  [analyzers.meta]
+  import_root = "k8s.io/kubernetes"
+  dependencies_vendored = true
